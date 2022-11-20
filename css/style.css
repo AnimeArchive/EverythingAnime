@@ -15,8 +15,18 @@
     text-decoration: none;
 }
 
-div.content {
+div.header {
     margin-left: 200px;
     padding: 1px 16px;
-    height: 1000px;
+    height: 512px;
+}
+
+.centered {
+   text-align: center;
+   vertical-align: middle;
+   line-height: 512px; 
+}
+
+div.content {
+
 }
