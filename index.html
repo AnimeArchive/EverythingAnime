@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Everything Anime!</title>
     </head>
     <body>
         <div class="sidebar-block">
-            <a href="#" class="test">Link 1</a>
-            <a href="#" class="test">Link 2</a>
-            <a href="#" class="test">Link 3</a>   
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <button class="dropdown-btn">Models
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="model_list.html">Model List</a>
+                <button class="dropdown-btn">Characters
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
         </div>
         <div class="header">
             <img src="Header.png" alt="Snow" style="width:100%;">
-            <h1 class="centered">EVERYTHING ANIME</h1>
+            <h1>EVERYTHING ANIME</h1>
+        </div>
+        <script>
+        //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+            
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                  dropdownContent.style.display = "none";
+                } else {
+                  dropdownContent.style.display = "block";
+                }
+              });
+            }
+        </script>
+        <div class="content">
+            <h2>Welcome!</h2>
+            <p>This site is for all you degenerates out there who can't get enough of existing anime girls.</p>
+            <p>
+                It mainly focuses on collecting all different custom anime models out there and some that are my own,
+                that is free to use for everyone. Anime image generation has become so popular, but <a href="https://github.com/CompVis/stable-diffusion" target="_blank">Stable Diffusion</a> has
+                made it even more popular. Even though its popularity exploded, the models were difficult to find for me as it
+                is scattered across Discord servers, Reddit communities, and HuggingFace repositories.
+            </p>
+            <p>
+                I am sure that there are going to be other people who is experiencing the same problems as well, which
+                is why I made this site. I hope you enjoy, and get to find some anime girls you will like.
+            </p>
         </div>
     </body>
 </html>
